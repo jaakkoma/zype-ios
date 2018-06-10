@@ -19,7 +19,9 @@
 @property (nonatomic, retain) NSDate * created_at;
 @property (nonatomic, retain) NSDate * updated_at;
 @property (nonatomic, retain) NSString * thumbnailUrl;
+@property (nonatomic, retain) NSString * mainThumbnailUrl;
 @property (nonatomic, retain) NSNumber * playlist_item_count;
+@property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) NSNumber * priority;
 @property (nonatomic, retain) NSString * thumbnail_layout;
 

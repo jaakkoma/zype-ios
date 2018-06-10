@@ -44,6 +44,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerTopLayoutConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *calendarWidthLayoutConstraint;
 
+@property (weak, nonatomic) IBOutlet UILabel *playlistDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *playlistImage;
 @property (strong, nonatomic) UIView *viewDateFilter;
 @property (strong, nonatomic) UIDatePicker *pickerDateFilter;
 @property (strong, nonatomic) UIButton *buttonDismiss;
@@ -82,6 +84,12 @@
     Playlist *currentPlaylist = [ACSPersistenceManager playlistWithID:self.playlistId];
     if (currentPlaylist != nil){
         self.title = currentPlaylist.title;
+        self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
+        
+        NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
+        NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
+        UIImage *image = [UIImage imageWithData:data];
+        [self.playlistImage setImage:image];
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadVideos) name:@"ResultsFromPlaylistReturned" object:nil];
     
