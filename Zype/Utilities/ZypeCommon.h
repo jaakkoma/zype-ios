@@ -11,10 +11,10 @@
 #pragma mark - Client Settings
 
 //Main app configuration for connecting to Zype property
-#define kOAuth_ClientId @"efff34ee145c7bdc8a8408a339571005f8bcdf2fb0ae5dfd0dbb248188daaf54"
-#define kOAuth_ClientSecret @"0fdedb3cf72afa6b37fabfbe100e2a2db5d6f4ecdbfe71eb53c223d722201a1d"
-#define kAppKey @"HQokZlmb_bsw1uYYCEVP5UQis08D9tDJgRrCtAStwJ7HmjBovVAMNz1WjpNJE-KU"
-#define kRootPlaylistId @"577e65c85577de0d1000c1ee"
+#define kOAuth_ClientId @"c895edf22783c9ac715f2216f1ee3207ef875f9343d2117150e5cd7285660b18"
+#define kOAuth_ClientSecret @"522c6a39b896c616ec13510c32d53f7236eb802cfd9f6d82a32b6797a82a4b16"
+#define kAppKey @"abjfFJ7v-yJwVB8iHQqQA0N3ifBuemW3drTm46Clm_gWD0xIff9-J8WaiWnM7e9E"
+#define kRootPlaylistId @"5a736db6d6a6de1227000528"
 
 //OneSignal configuration for Push notifications
 #define kOneSignalNotificationsKey @""
@@ -22,10 +22,10 @@
 #define kGoogleAnalyticsTracker @""
 
 //Social links on settings screen
-#define kACFacebook @"https://www.facebook.com/<your_branch>"
-#define kACWeb @"http://www.<your_branch>/"
-#define kACInstagram @"http://www.instagram.com/<your_branch>"
-#define kACTwitter @"https://twitter.com/<your_branch>"
+#define kACFacebook @"https://www.facebook.com/houseofintuitiontv"
+#define kACWeb @"http://www.hoi.tv/"
+#define kACInstagram @"http://www.instagram.com/hoi.tv"
+#define kACTwitter @"https://twitter.com/hoisunset"
 
 #define kAutoplay YES
 
@@ -56,7 +56,7 @@
 #define kMonthlySubscription @"monthly_subscription"
 #define kYearlySubscription @"yearly_subscription"
 
-#define kClientColor    [UIUtil colorWithHex:0xF75532];
+#define kClientColor    [UIUtil colorWithHex:0x168ac6];
 #define kTextPlaceholderColor [UIColor colorWithRed:0.72 green:0.72 blue:0.75 alpha:1.00]
 #define kLightTintColor [UIColor colorWithRed:1.00 green:0.11 blue:0.38 alpha:1.00]
 #define kLightLineColor [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1.00]

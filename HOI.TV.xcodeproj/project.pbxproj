@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		654D88C2798963BB588CD3FB /* libPods-Zype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 764C0AB300D78554EAEF60E3 /* libPods-Zype.a */; };
 		780AC6A31BDFD284007F1119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB52881A76D7D100E901F1 /* AppDelegate.m */; };
 		780AC6B41BDFD284007F1119 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BB52851A76D7D100E901F1 /* main.m */; };
 		780AC6D21BDFD284007F1119 /* ZypeDBMappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = B96FF88A1B17B535007CA447 /* ZypeDBMappingModel.xcmappingmodel */; };
@@ -166,9 +165,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0DD0AEA7B5AE6D1C598FD3F3 /* Pods-Zype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zype/Pods-Zype.debug.xcconfig"; sourceTree = "<group>"; };
-		764C0AB300D78554EAEF60E3 /* libPods-Zype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zype.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		780AC7081BDFD284007F1119 /* Zype TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zype TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB430921BBB0A6CF8CACE93 /* Pods-HOI.TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOI.TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV.debug.xcconfig"; sourceTree = "<group>"; };
+		780AC7081BDFD284007F1119 /* HOI.TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HOI.TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963FC4151AC9C54700CD2C19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		963FC41B1AC9C56600CD2C19 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9677B76A1ACB11FC0043515D /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
@@ -177,6 +175,7 @@
 		9677B7741ADC46020043515D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		9677B7761ADC46090043515D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9677B7781ADC46110043515D /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		9ECA90516E1D8222896A34BE /* Pods-HOI.TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOI.TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV.release.xcconfig"; sourceTree = "<group>"; };
 		A10797471D4015F700F84B61 /* PlaylistCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaylistCollectionViewCell.h; path = Views/PlaylistCollectionViewCell.h; sourceTree = "<group>"; };
 		A10797481D4015F700F84B61 /* PlaylistCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaylistCollectionViewCell.m; path = Views/PlaylistCollectionViewCell.m; sourceTree = "<group>"; };
 		A10797491D4015F700F84B61 /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlaylistCollectionViewCell.xib; path = Views/PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -348,7 +347,6 @@
 		A1B3C419203227E100784F64 /* AKAMMediaAnalytics_Av.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAMMediaAnalytics_Av.h; sourceTree = "<group>"; };
 		A1B3C41B203227E100784F64 /* libAKAMMediaExtensions-AV.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAKAMMediaExtensions-AV.a"; sourceTree = "<group>"; };
 		A1B3C41D203227E100784F64 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
-		A1D84BA0F72FFDAA8DEC35F6 /* Pods-Zype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zype.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zype/Pods-Zype.release.xcconfig"; sourceTree = "<group>"; };
 		B96C78BD1B40E85000B56C6B /* EpisodeControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EpisodeControllerDelegate.h; path = Protocols/EpisodeControllerDelegate.h; sourceTree = "<group>"; };
 		B96FF88A1B17B535007CA447 /* ZypeDBMappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = ZypeDBMappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		B9C5863E1B1CC60A00647936 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -446,7 +444,6 @@
 				780AC6EA1BDFD284007F1119 /* WebKit.framework in Frameworks */,
 				780AC6EB1BDFD284007F1119 /* QuartzCore.framework in Frameworks */,
 				780AC6EC1BDFD284007F1119 /* Security.framework in Frameworks */,
-				654D88C2798963BB588CD3FB /* libPods-Zype.a in Frameworks */,
 				A1B3C41E203227E100784F64 /* libAKAMMediaExtensions-AV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +610,6 @@
 				F176C9B91AAE18D30080E334 /* WebKit.framework */,
 				F176C9B51AA8B9770080E334 /* QuartzCore.framework */,
 				F176C9A51AA7963A0080E334 /* Security.framework */,
-				764C0AB300D78554EAEF60E3 /* libPods-Zype.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -647,7 +643,7 @@
 		F1BB52811A76D7D100E901F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				780AC7081BDFD284007F1119 /* Zype TV.app */,
+				780AC7081BDFD284007F1119 /* HOI.TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -872,8 +868,8 @@
 		F652EFF2D75B39EA363A2B9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0DD0AEA7B5AE6D1C598FD3F3 /* Pods-Zype.debug.xcconfig */,
-				A1D84BA0F72FFDAA8DEC35F6 /* Pods-Zype.release.xcconfig */,
+				0FB430921BBB0A6CF8CACE93 /* Pods-HOI.TV.debug.xcconfig */,
+				9ECA90516E1D8222896A34BE /* Pods-HOI.TV.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -881,25 +877,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		780AC69F1BDFD284007F1119 /* Zype */ = {
+		780AC69F1BDFD284007F1119 /* HOI.TV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 780AC7051BDFD284007F1119 /* Build configuration list for PBXNativeTarget "Zype" */;
+			buildConfigurationList = 780AC7051BDFD284007F1119 /* Build configuration list for PBXNativeTarget "HOI.TV" */;
 			buildPhases = (
 				675B4C01D45986A8FD14DF51 /* [CP] Check Pods Manifest.lock */,
 				780AC6A11BDFD284007F1119 /* Sources */,
 				780AC6DE1BDFD284007F1119 /* Frameworks */,
 				780AC6EE1BDFD284007F1119 /* Resources */,
 				780AC7031BDFD284007F1119 /* ShellScript */,
-				7A61F1D41D8E4610CCB40A8B /* [CP] Embed Pods Frameworks */,
 				2BF6A0A518748AED5DDC619B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Zype;
+			name = HOI.TV;
 			productName = ACShow;
-			productReference = 780AC7081BDFD284007F1119 /* Zype TV.app */;
+			productReference = 780AC7081BDFD284007F1119 /* HOI.TV.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -909,11 +904,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = Zype;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "HOI.TV, Inc.";
 				TargetAttributes = {
 					780AC69F1BDFD284007F1119 = {
-						DevelopmentTeam = 66JU87JGLE;
+						DevelopmentTeam = GZ435AXM84;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -927,7 +922,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F1BB527B1A76D7D100E901F1 /* Build configuration list for PBXProject "Zype" */;
+			buildConfigurationList = F1BB527B1A76D7D100E901F1 /* Build configuration list for PBXProject "HOI.TV" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -940,7 +935,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				780AC69F1BDFD284007F1119 /* Zype */,
+				780AC69F1BDFD284007F1119 /* HOI.TV */,
 			);
 		};
 /* End PBXProject section */
@@ -1008,13 +1003,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zype/Pods-Zype-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		675B4C01D45986A8FD14DF51 /* [CP] Check Pods Manifest.lock */ = {
@@ -1023,13 +1021,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOI.TV-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		780AC7031BDFD284007F1119 /* ShellScript */ = {
@@ -1044,21 +1045,6 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/Fabric/run 83465ef9de45bd3ccc1aeaa066ed7d13dd96a1e4 0b81dd3d4789d7cebb8ee4d77fe25dcaabbf0f8cb55d8c6f7392d4b798e8c57f";
-		};
-		7A61F1D41D8E4610CCB40A8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zype/Pods-Zype-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1191,14 +1177,14 @@
 /* Begin XCBuildConfiguration section */
 		780AC7061BDFD284007F1119 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DD0AEA7B5AE6D1C598FD3F3 /* Pods-Zype.debug.xcconfig */;
+			baseConfigurationReference = 0FB430921BBB0A6CF8CACE93 /* Pods-HOI.TV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZYPE MEDIA GROUP LLC (66JU87JGLE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GZ435AXM84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1213,8 +1199,8 @@
 					"$(PROJECT_DIR)/Zype",
 					"$(PROJECT_DIR)/Zype/Libraries/AkamMAlibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zype.sandbox;
-				PRODUCT_NAME = "Zype TV";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.hoi.ios;
+				PRODUCT_NAME = HOI.TV;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1227,14 +1213,14 @@
 		};
 		780AC7071BDFD284007F1119 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1D84BA0F72FFDAA8DEC35F6 /* Pods-Zype.release.xcconfig */;
+			baseConfigurationReference = 9ECA90516E1D8222896A34BE /* Pods-HOI.TV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZYPE MEDIA GROUP LLC (66JU87JGLE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GZ435AXM84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1249,8 +1235,8 @@
 					"$(PROJECT_DIR)/Zype",
 					"$(PROJECT_DIR)/Zype/Libraries/AkamMAlibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zype.sandbox;
-				PRODUCT_NAME = "Zype TV";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.hoi.ios;
+				PRODUCT_NAME = HOI.TV;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1272,12 +1258,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1328,12 +1316,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1369,7 +1359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		780AC7051BDFD284007F1119 /* Build configuration list for PBXNativeTarget "Zype" */ = {
+		780AC7051BDFD284007F1119 /* Build configuration list for PBXNativeTarget "HOI.TV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				780AC7061BDFD284007F1119 /* Debug */,
@@ -1378,7 +1368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1BB527B1A76D7D100E901F1 /* Build configuration list for PBXProject "Zype" */ = {
+		F1BB527B1A76D7D100E901F1 /* Build configuration list for PBXProject "HOI.TV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1BB52A41A76D7D100E901F1 /* Debug */,
