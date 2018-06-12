@@ -482,8 +482,10 @@
                 playlist.pId = [dictionary valueForKey:key];
             } else if ([key isEqualToString:kAppKey_Thumbnails]){
                 //don't load regular thumbnail if mobile image is added
-                if ( ! customThumbnailImageIsLoaded)
-                playlist.thumbnailUrl = [UIUtil thumbnailUrlFromArray:[dictionary valueForKey:key]];
+                if ( ! customThumbnailImageIsLoaded) {
+                    playlist.thumbnailUrl = [UIUtil thumbnailUrlFromArray:[dictionary valueForKey:key]];
+                }
+                playlist.mainThumbnailUrl = [UIUtil thumbnailUrlFromArray:[dictionary valueForKey:key]];
             } else if ([key isEqualToString:kAppKey_Images]){
                 NSString *layout = dictionary[@"thumbnail_layout"];
                 NSString *tempUrl = [UIUtil thumbnailUrlFromImageArray:[dictionary valueForKey:key] withLayout:layout];
@@ -491,6 +493,12 @@
                     playlist.thumbnailUrl = tempUrl;
                     customThumbnailImageIsLoaded = true;
                 }
+            } else if ([key isEqualToString:@"description"]){
+                    //don't load regular thumbnail if mobile image is added
+                    if( ![[dictionary valueForKey:key] isEqualToString: @""] ) {
+                        NSString *description = [dictionary valueForKey:key];
+                        [playlist setValue:description forKey:@"desc"];
+                    }
             } else if ([playlist respondsToSelector:NSSelectorFromString(key)]) {
                 if ([key stringContains:kAppKey_At])
                     [playlist setValue:[[UIUtil dateFormatter] dateFromString:[dictionary valueForKey:key]] forKey:key];

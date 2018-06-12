@@ -17,7 +17,9 @@
 @dynamic created_at;
 @dynamic updated_at;
 @dynamic thumbnailUrl;
+@dynamic mainThumbnailUrl;
 @dynamic playlist_item_count;
+@dynamic desc;
 @dynamic priority;
 @dynamic thumbnail_layout;
 

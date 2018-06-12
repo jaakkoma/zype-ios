@@ -12,6 +12,8 @@
 
 @property (nonatomic) NSString *playlistId;
 @property (nonatomic) BOOL isLivePictureLoaded;
+@property (nonatomic) BOOL *playlistDescription;
+
 
 
 @end
