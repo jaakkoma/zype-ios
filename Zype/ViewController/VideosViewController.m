@@ -84,7 +84,10 @@
     Playlist *currentPlaylist = [ACSPersistenceManager playlistWithID:self.playlistId];
     if (currentPlaylist != nil){
         self.title = currentPlaylist.title;
-        self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
+        if(currentPlaylist.desc)
+            self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
+        else
+            self.playlistDescriptionLabel.text = @"";
         
         NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
         NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
