@@ -891,7 +891,6 @@
 				780AC6EE1BDFD284007F1119 /* Resources */,
 				780AC7031BDFD284007F1119 /* ShellScript */,
 				2BF6A0A518748AED5DDC619B /* [CP] Copy Pods Resources */,
-				6481477E67685142D7577F6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1013,26 +1012,11 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6481477E67685142D7577F6E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOI.TV/Pods-HOI.TV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		675B4C01D45986A8FD14DF51 /* [CP] Check Pods Manifest.lock */ = {
