@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZNN-a5-bRb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZNN-a5-bRb">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1799,13 +1799,6 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking for shows..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" id="gkN-TC-naV" userLabel="No Results Label">
-                                    <rect key="frame" x="0.0" y="-212.33333333333337" width="414" height="712"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
-                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1z2-s0-eyn">
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -1837,6 +1830,12 @@
                                 <color key="textColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking for shows..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="gkN-TC-naV" userLabel="No Results Label">
+                                <rect key="frame" x="310.5" y="502" width="147.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1846,12 +1845,14 @@
                             <constraint firstItem="S5t-hh-1M5" firstAttribute="leading" secondItem="SYP-4K-f70" secondAttribute="leading" id="7En-3G-uvX"/>
                             <constraint firstAttribute="trailing" secondItem="1z2-s0-eyn" secondAttribute="trailing" id="8zR-Xr-xoG"/>
                             <constraint firstItem="yxx-Ms-JtA" firstAttribute="top" secondItem="S5t-hh-1M5" secondAttribute="bottom" constant="10" id="DF5-zW-FhA"/>
+                            <constraint firstItem="gkN-TC-naV" firstAttribute="centerX" secondItem="SYP-4K-f70" secondAttribute="centerX" id="FOb-pR-bFE"/>
                             <constraint firstAttribute="trailing" secondItem="yxx-Ms-JtA" secondAttribute="trailing" constant="15" id="FuS-p0-PdY"/>
                             <constraint firstItem="S5t-hh-1M5" firstAttribute="top" secondItem="SYP-4K-f70" secondAttribute="top" id="LK2-4v-H7m"/>
                             <constraint firstItem="NIf-vC-poX" firstAttribute="leading" secondItem="SYP-4K-f70" secondAttribute="leading" id="Md2-Xl-eO9"/>
                             <constraint firstAttribute="trailing" secondItem="NIf-vC-poX" secondAttribute="trailing" id="P4g-0v-mva"/>
                             <constraint firstAttribute="trailing" secondItem="yMp-Ge-oMW" secondAttribute="trailing" id="Wun-cU-Aqf"/>
                             <constraint firstItem="yMp-Ge-oMW" firstAttribute="leading" secondItem="SYP-4K-f70" secondAttribute="leading" id="XiP-GD-ol1"/>
+                            <constraint firstItem="gkN-TC-naV" firstAttribute="centerY" secondItem="SYP-4K-f70" secondAttribute="centerY" id="Xio-YV-gUg"/>
                             <constraint firstItem="lp5-8b-WbA" firstAttribute="top" secondItem="1z2-s0-eyn" secondAttribute="bottom" id="cky-FO-E83"/>
                             <constraint firstItem="1z2-s0-eyn" firstAttribute="top" secondItem="vMb-m2-AYx" secondAttribute="bottom" id="d08-Nw-U4U"/>
                             <constraint firstItem="yxx-Ms-JtA" firstAttribute="leading" secondItem="SYP-4K-f70" secondAttribute="leading" constant="15" id="lhI-WF-0n5"/>
