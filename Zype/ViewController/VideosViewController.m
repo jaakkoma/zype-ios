@@ -28,7 +28,10 @@
 
 
 @interface VideosViewController ()<UIActionSheetDelegate, WKNavigationDelegate, ACActionSheetManagerDelegate>
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 
+@property (weak, nonatomic) IBOutlet UITableView *videosTableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -64,6 +67,12 @@
 @implementation VideosViewController
 
 
+- (void)viewDidLayoutSubviews {
+    // do it here, after constraints have been materialized
+    
+
+}
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -81,19 +90,43 @@
     [self setupInterface];
     
     [self getNewData];
+    
     Playlist *currentPlaylist = [ACSPersistenceManager playlistWithID:self.playlistId];
     if (currentPlaylist != nil){
         self.title = currentPlaylist.title;
+       
         if(currentPlaylist.desc)
             self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
         else
             self.playlistDescriptionLabel.text = @"";
         
-        NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
-        NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
-        UIImage *image = [UIImage imageWithData:data];
-        [self.playlistImage setImage:image];
+        if(currentPlaylist.mainThumbnailUrl != @"") {
+            NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
+            NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
+            UIImage *image = [UIImage imageWithData:data];
+            [self.playlistImage setImage:image];
+        } else {
+            NSLayoutConstraint *constraint = [NSLayoutConstraint
+                                              constraintWithItem:self.videosTableView
+                                              attribute:NSLayoutAttributeTop
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view
+                                              attribute:NSLayoutAttributeTop
+                                              multiplier:1.0
+                                              constant:0.0f];
+            self.tableViewTopConstraint = constraint;
+            constraint.active = YES;
+            NSLog(@"load contrainsts");
+        }
+//        self.playlistImage.frame = CGRectMake(0, 0,1,0);
+//        self.playlistImage.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//        self.playlistImage.contentMode = UIViewContentModeScaleAspectFit;
+
+//        [self.playlistImage ];
+//        self.playlistImage = nil;
     }
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadVideos) name:@"ResultsFromPlaylistReturned" object:nil];
     
     //[self customizeSearchBar];
@@ -121,6 +154,11 @@
     
     [self.view bringSubviewToFront:self.buttonDismissSearch];
     //[self.activityIndicator stopAnimating];
+    
+//    [self.videosTableView removeConstraint:self.tableViewTopConstraint];
+    
+
+
     
 }
 
