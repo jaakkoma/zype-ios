@@ -117,12 +117,15 @@
                 self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
             else
                 self.playlistDescriptionLabel.text = @"";
-
-            if(currentPlaylist.mainThumbnailUrl != @"") {
+            
+            if([currentPlaylist.mainThumbnailUrl isEqualToString:@""]) {
                 NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
                 NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
                 UIImage *image = [UIImage imageWithData:data];
                 [self.playlistImage setImage:image];
+                NSLog(@"place thumbnail");
+                NSLog(currentPlaylist.mainThumbnailUrl);
+
             } else {
                 NSLayoutConstraint *constraint = [NSLayoutConstraint
                                                   constraintWithItem:self.videosTableView
@@ -132,6 +135,7 @@
                                                   attribute:NSLayoutAttributeTop
                                                   multiplier:1.0
                                                   constant:0.0f];
+                constraint.priority =UILayoutPriorityDefaultHigh;
                 self.tableViewTopConstraint = constraint;
                 constraint.active = YES;
                 NSLog(@"load contrainsts");
