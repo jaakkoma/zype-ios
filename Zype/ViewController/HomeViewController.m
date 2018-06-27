@@ -117,8 +117,8 @@
                 self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
             else
                 self.playlistDescriptionLabel.text = @"";
-            
-            if([currentPlaylist.mainThumbnailUrl isEqualToString:@""]) {
+                        
+            if(![currentPlaylist.mainThumbnailUrl isEqualToString:@""]) {
                 NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
                 NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
                 UIImage *image = [UIImage imageWithData:data];
@@ -138,7 +138,7 @@
                 constraint.priority =UILayoutPriorityDefaultHigh;
                 self.tableViewTopConstraint = constraint;
                 constraint.active = YES;
-                NSLog(@"load contrainsts");
+                NSLog(@"load constrainsts");
             }
         }
     } else {
