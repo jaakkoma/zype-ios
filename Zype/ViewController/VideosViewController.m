@@ -108,18 +108,18 @@
             UIImage *image = [UIImage imageWithData:data];
             [self.playlistImage setImage:image];
         } else {
-            NSLayoutConstraint *tableConstraint = [NSLayoutConstraint
-                                                   constraintWithItem:self.videosTableView
-                                                   attribute:NSLayoutAttributeTop
-                                                   relatedBy:NSLayoutRelationEqual
-                                                   toItem:self.view
-                                                   attribute:NSLayoutAttributeTop
-                                                   multiplier:1.0
-                                                   constant:0.0f];
-            tableConstraint.priority =UILayoutPriorityDefaultHigh;
-            self.tableViewTopConstraint = tableConstraint;
-            tableConstraint.active = YES;
+            NSLayoutConstraint *constraint = [NSLayoutConstraint
+                                              constraintWithItem:self.videosTableView
+                                              attribute:NSLayoutAttributeTop
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view
+                                              attribute:NSLayoutAttributeTop
+                                              multiplier:1.0
+                                              constant:0.0f];
+            self.tableViewTopConstraint = constraint;
+            constraint.active = YES;
             
+            [self.view addSubview: self.videosCollectionView];
             NSLayoutConstraint *collectionConstraint = [NSLayoutConstraint
                                                         constraintWithItem:self.videosCollectionView
                                                         attribute:NSLayoutAttributeTop
