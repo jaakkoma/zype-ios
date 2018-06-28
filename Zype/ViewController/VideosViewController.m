@@ -32,6 +32,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *videosTableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
+@property (weak, nonatomic) IBOutlet UICollectionView *videosCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopConstraint;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -95,28 +97,43 @@
     if (currentPlaylist != nil){
         self.title = currentPlaylist.title;
        
-        if(currentPlaylist.desc)
+        if(![currentPlaylist.mainThumbnailUrl isEqualToString:@""] && currentPlaylist.desc)
             self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
         else
             self.playlistDescriptionLabel.text = @"";
         
-        if(currentPlaylist.mainThumbnailUrl != @"") {
+        if(![currentPlaylist.mainThumbnailUrl isEqualToString:@""]) {
             NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
             NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
             UIImage *image = [UIImage imageWithData:data];
             [self.playlistImage setImage:image];
         } else {
-            NSLayoutConstraint *constraint = [NSLayoutConstraint
-                                              constraintWithItem:self.videosTableView
-                                              attribute:NSLayoutAttributeTop
-                                              relatedBy:NSLayoutRelationEqual
-                                              toItem:self.view
-                                              attribute:NSLayoutAttributeTop
-                                              multiplier:1.0
-                                              constant:0.0f];
-            self.tableViewTopConstraint = constraint;
-            constraint.active = YES;
-            NSLog(@"load contrainsts");
+            NSLayoutConstraint *tableConstraint = [NSLayoutConstraint
+                                                   constraintWithItem:self.videosTableView
+                                                   attribute:NSLayoutAttributeTop
+                                                   relatedBy:NSLayoutRelationEqual
+                                                   toItem:self.view
+                                                   attribute:NSLayoutAttributeTop
+                                                   multiplier:1.0
+                                                   constant:0.0f];
+            tableConstraint.priority =UILayoutPriorityDefaultHigh;
+            self.tableViewTopConstraint = tableConstraint;
+            tableConstraint.active = YES;
+            
+            NSLayoutConstraint *collectionConstraint = [NSLayoutConstraint
+                                                        constraintWithItem:self.videosCollectionView
+                                                        attribute:NSLayoutAttributeTop
+                                                        relatedBy:NSLayoutRelationEqual
+                                                        toItem:self.view
+                                                        attribute:NSLayoutAttributeTop
+                                                        multiplier:1.0
+                                                        constant:0.0f];
+            collectionConstraint.priority = UILayoutPriorityDefaultHigh;
+            self.collectionViewTopConstraint = collectionConstraint;
+            collectionConstraint.active = YES;
+            
+            NSLog(@"load constraints");
+            
         }
 //        self.playlistImage.frame = CGRectMake(0, 0,1,0);
 //        self.playlistImage.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

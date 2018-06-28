@@ -27,7 +27,12 @@
 #import "ACSPersistenceManager.h"//remove this after test
 
 @interface HomeViewController ()<UIActionSheetDelegate, WKNavigationDelegate, ACActionSheetManagerDelegate>
+//for iphone
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
+// for ipad
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopConstraint;
+@property (weak, nonatomic) IBOutlet UICollectionView *videoCollectionView;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *playlistImage;
 @property (weak, nonatomic) IBOutlet UITableView *videosTableView;
@@ -113,21 +118,41 @@
         if (currentPlaylist != nil){
             self.title = currentPlaylist.title;
 
-            if(currentPlaylist.desc)
+            if(![currentPlaylist.mainThumbnailUrl isEqualToString:@""] && currentPlaylist.desc)
                 self.playlistDescriptionLabel.text = [NSString stringWithFormat:@"%@", currentPlaylist.desc];
             else
                 self.playlistDescriptionLabel.text = @"";
-                        
+            
+            NSLog(@"thumbnail constraint conditional");
+
             if(![currentPlaylist.mainThumbnailUrl isEqualToString:@""]) {
                 NSURL *thumbnailURL = [NSURL URLWithString:currentPlaylist.mainThumbnailUrl];
                 NSData *data = [NSData dataWithContentsOfURL:thumbnailURL];
                 UIImage *image = [UIImage imageWithData:data];
                 [self.playlistImage setImage:image];
                 NSLog(@"place thumbnail");
-                NSLog(currentPlaylist.mainThumbnailUrl);
+                
+                
+                [self.view addSubview:self.videoCollectionView];
+                NSLayoutConstraint *collectionConstraint = [NSLayoutConstraint
+                                                            constraintWithItem:self.videoCollectionView
+                                                            attribute:NSLayoutAttributeTop
+                                                            relatedBy:NSLayoutRelationEqual
+                                                            toItem:self.playlistDescriptionLabel
+                                                            attribute:NSLayoutAttributeBottom
+                                                            multiplier:1.0
+                                                            constant:0.0f];
+                collectionConstraint.priority = UILayoutPriorityDefaultHigh;
+                self.collectionViewTopConstraint = collectionConstraint;
+                collectionConstraint.active = YES;
+                
+//                NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:1];
+//                [array addObject:self.collectionViewTopConstraint];
+//                NSLog(@"%@",array);
+//                [self.view removeConstraints: array];
 
             } else {
-                NSLayoutConstraint *constraint = [NSLayoutConstraint
+                NSLayoutConstraint *tableConstraint = [NSLayoutConstraint
                                                   constraintWithItem:self.videosTableView
                                                   attribute:NSLayoutAttributeTop
                                                   relatedBy:NSLayoutRelationEqual
@@ -135,16 +160,20 @@
                                                   attribute:NSLayoutAttributeTop
                                                   multiplier:1.0
                                                   constant:0.0f];
-                constraint.priority =UILayoutPriorityDefaultHigh;
-                self.tableViewTopConstraint = constraint;
-                constraint.active = YES;
-                NSLog(@"load constrainsts");
+                tableConstraint.priority =UILayoutPriorityDefaultHigh;
+                self.tableViewTopConstraint = tableConstraint;
+                tableConstraint.active = YES;
+                
+               
+                
+                NSLog(@"load constraints");
             }
         }
     } else {
         //playlist item is nil, load root
         currentPlaylistID = kRootPlaylistId;
         [self trackScreenName:kAnalyticsScreenNameHome];
+        
         NSLayoutConstraint *constraint = [NSLayoutConstraint
                                           constraintWithItem:self.videosTableView
                                           attribute:NSLayoutAttributeTop
@@ -156,6 +185,11 @@
         self.tableViewTopConstraint = constraint;
         constraint.active = YES;
         NSLog(@"load contrainsts");
+        
+
+        
+//        NSLayoutConstraint *collectionConstraint = [NSLayoutConstraint
+
     }
     
     [self loadDataWithPlaylistID:currentPlaylistID];
