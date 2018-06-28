@@ -119,7 +119,7 @@
             self.tableViewTopConstraint = constraint;
             constraint.active = YES;
             
-            [self.view addSubview: self.videosCollectionView];
+            [self.view addSubview:self.videosCollectionView];
             NSLayoutConstraint *collectionConstraint = [NSLayoutConstraint
                                                         constraintWithItem:self.videosCollectionView
                                                         attribute:NSLayoutAttributeTop

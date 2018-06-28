@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,21 +20,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-6O-HpY">
-                        <rect key="frame" x="0.0" y="0.0" width="225" height="127"/>
+                        <rect key="frame" x="15" y="0.0" width="215" height="121"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Mik-6O-HpY" secondAttribute="height" multiplier="16:9" id="aig-oT-f9Q"/>
                         </constraints>
                     </imageView>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPlayFull" translatesAutoresizingMaskIntoConstraints="NO" id="tEG-Qg-F7N">
-                        <rect key="frame" x="204" y="102" width="13" height="13"/>
+                        <rect key="frame" x="204" y="96" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="HkO-og-xYL"/>
                             <constraint firstAttribute="width" constant="13" id="YwY-OR-Fad"/>
                         </constraints>
                     </imageView>
                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLK-qQ-j6Z">
-                        <rect key="frame" x="8" y="97" width="90.5" height="22"/>
+                        <rect key="frame" x="8" y="91" width="90.5" height="22"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-Sy-W9B" userLabel="Action Label">
                                 <rect key="frame" x="5" y="3.5" width="80.5" height="15"/>
@@ -54,7 +54,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpa-fi-R08">
-                        <rect key="frame" x="0.0" y="127" width="225" height="77"/>
+                        <rect key="frame" x="0.0" y="121" width="225" height="83"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-XE-moY">
                                 <rect key="frame" x="0.0" y="0.0" width="225" height="3"/>
@@ -64,12 +64,12 @@
                                 </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-Mx-JvG" userLabel="Title Label">
-                                <rect key="frame" x="0.0" y="12" width="142" height="39"/>
+                                <rect key="frame" x="15" y="12" width="127" height="38.5"/>
                                 <string key="text">Title
 Line 2
 Line 3</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="Wu0-Ez-57K">
@@ -91,9 +91,9 @@ Line 3</string>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="zns-yl-29c">
-                                <rect key="frame" x="0.0" y="51" width="44" height="15"/>
+                                <rect key="frame" x="15" y="50.5" width="44" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -103,9 +103,9 @@ Line 3</string>
                             <constraint firstItem="NTp-XE-moY" firstAttribute="leading" secondItem="Jpa-fi-R08" secondAttribute="leading" id="52V-cB-yC5"/>
                             <constraint firstItem="NTp-XE-moY" firstAttribute="top" secondItem="Jpa-fi-R08" secondAttribute="top" id="8TL-mV-7sP"/>
                             <constraint firstItem="qrj-Ea-pmF" firstAttribute="leading" secondItem="Wu0-Ez-57K" secondAttribute="trailing" constant="5" id="F8x-uk-e3N"/>
-                            <constraint firstItem="zns-yl-29c" firstAttribute="leading" secondItem="Jpa-fi-R08" secondAttribute="leading" id="LEd-NZ-NBc"/>
+                            <constraint firstItem="zns-yl-29c" firstAttribute="leading" secondItem="Jpa-fi-R08" secondAttribute="leading" constant="15" id="LEd-NZ-NBc"/>
                             <constraint firstItem="qrj-Ea-pmF" firstAttribute="top" secondItem="Jpa-fi-R08" secondAttribute="top" id="O5h-u7-70r"/>
-                            <constraint firstItem="fbq-Mx-JvG" firstAttribute="leading" secondItem="Jpa-fi-R08" secondAttribute="leading" id="Pbq-iv-mvC"/>
+                            <constraint firstItem="fbq-Mx-JvG" firstAttribute="leading" secondItem="Jpa-fi-R08" secondAttribute="leading" constant="15" id="Pbq-iv-mvC"/>
                             <constraint firstItem="fbq-Mx-JvG" firstAttribute="top" secondItem="Jpa-fi-R08" secondAttribute="top" constant="12" id="WwD-Zz-NWZ"/>
                             <constraint firstItem="Wu0-Ez-57K" firstAttribute="leading" secondItem="fbq-Mx-JvG" secondAttribute="trailing" constant="8" id="cgc-ys-9dk"/>
                             <constraint firstAttribute="trailing" secondItem="Wu0-Ez-57K" secondAttribute="trailing" constant="50" id="fCv-Pc-NFw"/>
@@ -122,21 +122,21 @@ Line 3</string>
                         </constraints>
                     </imageView>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Veq-xa-nwj">
-                        <rect key="frame" x="102.5" y="53.5" width="20" height="20"/>
+                        <rect key="frame" x="112.5" y="50.5" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Veq-xa-nwj" firstAttribute="centerY" secondItem="Mik-6O-HpY" secondAttribute="centerY" id="0Z4-jk-5Q7"/>
                 <constraint firstItem="Jpa-fi-R08" firstAttribute="leading" secondItem="sRP-Gv-bHj" secondAttribute="leading" id="77r-es-lrz"/>
                 <constraint firstItem="Veq-xa-nwj" firstAttribute="centerX" secondItem="Mik-6O-HpY" secondAttribute="centerX" id="E77-5u-2hN"/>
-                <constraint firstAttribute="trailing" secondItem="Mik-6O-HpY" secondAttribute="trailing" constant="20" id="ErQ-Hc-YVE"/>
+                <constraint firstAttribute="trailing" secondItem="Mik-6O-HpY" secondAttribute="trailing" constant="15" id="ErQ-Hc-YVE"/>
                 <constraint firstItem="Jpa-fi-R08" firstAttribute="top" secondItem="tEG-Qg-F7N" secondAttribute="bottom" constant="12" id="Iu3-4a-7V4"/>
                 <constraint firstItem="Xq8-ut-FYG" firstAttribute="leading" secondItem="sRP-Gv-bHj" secondAttribute="leading" constant="8" id="OZS-1B-ebj"/>
                 <constraint firstItem="Mik-6O-HpY" firstAttribute="top" secondItem="sRP-Gv-bHj" secondAttribute="top" id="Spk-gF-ap5"/>
                 <constraint firstItem="Jpa-fi-R08" firstAttribute="top" secondItem="BLK-qQ-j6Z" secondAttribute="bottom" constant="8" id="Wga-Ye-QVI"/>
-                <constraint firstItem="Mik-6O-HpY" firstAttribute="leading" secondItem="sRP-Gv-bHj" secondAttribute="leading" id="ZXP-Nt-Dn6"/>
+                <constraint firstItem="Mik-6O-HpY" firstAttribute="leading" secondItem="sRP-Gv-bHj" secondAttribute="leading" constant="15" id="ZXP-Nt-Dn6"/>
                 <constraint firstItem="Jpa-fi-R08" firstAttribute="top" secondItem="Mik-6O-HpY" secondAttribute="bottom" id="djn-DO-8dU"/>
                 <constraint firstAttribute="trailing" secondItem="tEG-Qg-F7N" secondAttribute="trailing" constant="28" id="jZX-kj-Jak"/>
                 <constraint firstItem="Xq8-ut-FYG" firstAttribute="top" secondItem="sRP-Gv-bHj" secondAttribute="top" constant="8" id="lkU-3M-b12"/>

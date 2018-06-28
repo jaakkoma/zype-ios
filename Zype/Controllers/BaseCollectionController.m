@@ -16,7 +16,7 @@
 #define kRowCellCountOrientationPortrait 2
 #define kImageCellAcpectRatio 0.5625 // 9/16 ratio
 #define kPaddingBeetweenCells 0
-#define kPlaylistCollectionCellLabelHeight 20
+#define kPlaylistCollectionCellLabelHeight 40
 
 @interface BaseCollectionController ()
 
