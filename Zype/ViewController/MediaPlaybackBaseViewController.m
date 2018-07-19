@@ -267,6 +267,7 @@
 }
 
 - (void)moviePlayerDidExitFullscreen{
+    NSLog(@"Force to portrait MBPlayer");
     
     [self forceToPortrait];
     

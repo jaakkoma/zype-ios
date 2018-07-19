@@ -121,6 +121,8 @@ static NSString *kOptionTableViewCell = @"OptionTableViewCell";
         if (self.avPlayerController.player){
             //[self.avPlayerController.player pause]; //caused crash in the emulator
             self.avPlayerController.player = nil;
+            NSLog(@"Exiting video details");
+            [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
         }
         self.avPlayerController = nil;
     }
@@ -943,6 +945,7 @@ static NSString *kOptionTableViewCell = @"OptionTableViewCell";
         [self.avPlayer pause];
         [self.avPlayer seekToTime:kCMTimeZero];
         NSLog(@"moviePlayBackDidFinish");
+        
         // Set played
         if (self.video.isDownload.boolValue == YES && self.video.isPlayed.boolValue == NO) {
             
@@ -1017,7 +1020,7 @@ static NSString *kOptionTableViewCell = @"OptionTableViewCell";
 }
 
 - (void)movieFullscreenWillExit:(NSNotification *)notification {
-    
+    NSLog(@"Old Exit Full Screen");
     if ([self isRegularSizeClass] == NO) {
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
     }
